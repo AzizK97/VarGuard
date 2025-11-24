@@ -26,4 +26,4 @@ EXPOSE 8000
 WORKDIR /var/log/suricata
 
 # Run Suricata
-CMD ["suricata", "-c", "/etc/suricata/suricata.yaml", "-i", "eth0", "-v"]
+CMD ["suricata", "-c", "/etc/suricata/suricata.yaml", "-i", "wlp4s0", "-v"]
