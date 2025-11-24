@@ -1,0 +1,20 @@
+cat > abir-app.yaml << EOF
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: abir-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/turkimedaziz/Projet_fwk.git
+    targetRevision: Abir
+    path: k8s
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: abir-ns
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+EOF
