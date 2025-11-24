@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: suricata
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: suricata
+  template:
+    metadata:
+      labels:
+        app: suricata
+    spec:
+      hostNetwork: true # Required for sniffing host traffic
+      containers:
+        - name: suricata
+          image: suricata:latest # Ensure this image is built/pushed
+          securityContext:
+            capabilities:
+              add:
+                - NET_ADMIN
+                - NET_RAW
+          volumeMounts:
+            - name: suricata-logs
+              mountPath: /var/log/suricata
+            - name: suricata-config
+              mountPath: /etc/suricata/suricata.yaml
+              subPath: suricata.yaml
+      volumes:
+        - name: suricata-logs
+          emptyDir: {} # Shared volume for logs
+        - name: suricata-config
+          configMap:
+            name: suricata-config
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: suricata-config
+data:
+  suricata.yaml: |
+    # Placeholder for actual suricata.yaml content
+    # You should populate this with the content of docker/suricata/suricata.yaml
+    vars:
+      address-groups:
+        HOME_NET: "[192.168.0.0/16,10.0.0.0/8,172.16.0.0/12]"
+        EXTERNAL_NET: "!$HOME_NET"

@@ -1,0 +1,29 @@
+FROM ubuntu:22.04
+
+# Install dependencies
+RUN apt-get update && apt-get install -y \
+    software-properties-common \
+    wget \
+    && add-apt-repository ppa:oisf/suricata-stable \
+    && apt-get update \
+    && apt-get install -y suricata \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+# Create directories
+RUN mkdir -p /var/log/suricata /etc/suricata/rules
+
+# Download ET Open ruleset
+RUN suricata-update
+
+# Copy custom configuration
+COPY suricata/suricata.yaml /etc/suricata/suricata.yaml
+
+# Expose ports (if needed for management)
+EXPOSE 8000
+
+# Set working directory
+WORKDIR /var/log/suricata
+
+# Run Suricata
+CMD ["suricata", "-c", "/etc/suricata/suricata.yaml", "-i", "eth0", "-v"]

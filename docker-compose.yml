@@ -1,0 +1,70 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: 'postgres:latest'
+    environment:
+      POSTGRES_DB: mydatabase
+      POSTGRES_PASSWORD: secret
+      POSTGRES_USER: myuser
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+  elasticsearch:
+    image: 'docker.elastic.co/elasticsearch/elasticsearch:8.11.0'
+    environment:
+      discovery.type: single-node
+      xpack.security.enabled: 'false'
+      ES_JAVA_OPTS: '-Xms512m -Xmx512m'
+    ports:
+      - '9200:9200'
+      - '9300:9300'
+    volumes:
+      - elasticsearch-data:/usr/share/elasticsearch/data
+
+  suricata:
+    build:
+      context: ./docker
+      dockerfile: Dockerfile.suricata
+    network_mode: host
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+    volumes:
+      - suricata-logs:/var/log/suricata
+      - ./docker/suricata/suricata.yaml:/etc/suricata/suricata.yaml:ro
+    depends_on:
+      - elasticsearch
+
+  mock-backend:
+    build:
+      context: ./dashboard/mock-backend
+      dockerfile: Dockerfile
+    ports:
+      - '4000:4000'
+    volumes:
+      - ./dashboard/mock-backend:/usr/src/app
+    environment:
+      - NODE_ENV=production
+
+  dashboard:
+    build:
+      context: ./dashboard
+      dockerfile: Dockerfile
+    ports:
+      - '8080:80'
+    depends_on:
+      - mock-backend
+
+  traffic-gen:
+    image: curlimages/curl:8.2.1
+    network_mode: host
+    command: ["/bin/sh","-c","while true; do curl -s http://localhost:8080 >/dev/null || true; curl -s http://localhost:4000 >/dev/null || true; sleep 2; done"]
+    restart: unless-stopped
+
+volumes:
+  postgres-data:
+  elasticsearch-data:
+  suricata-logs:
