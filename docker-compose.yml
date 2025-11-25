@@ -38,32 +38,31 @@ services:
     depends_on:
       - elasticsearch
 
-  mock-backend:
+  scan:
     build:
-      context: ./dashboard/mock-backend
+      context: ./scan
       dockerfile: Dockerfile
     ports:
-      - '4000:4000'
+      - '8080:8080'
     volumes:
-      - ./dashboard/mock-backend:/usr/src/app
-      - /usr/src/app/node_modules
       - suricata-logs:/var/log/suricata:ro
-    environment:
-      - NODE_ENV=production
+    depends_on:
+      - elasticsearch
+      - postgres
 
   dashboard:
     build:
       context: ./dashboard
       dockerfile: Dockerfile
     ports:
-      - '8080:80'
+      - '3000:80'
     depends_on:
-      - mock-backend
+      - scan
 
   traffic-gen:
     image: curlimages/curl:8.2.1
     network_mode: host
-    command: [ "/bin/sh", "-c", "while true; do curl -s http://localhost:8080 >/dev/null || true; curl -s http://localhost:4000 >/dev/null || true; sleep 2; done" ]
+    command: [ "/bin/sh", "-c", "while true; do curl -s http://localhost:8080/api/suricata/alerts/recent >/dev/null || true; sleep 2; done" ]
     restart: unless-stopped
 
 volumes:
