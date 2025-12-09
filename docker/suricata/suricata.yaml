@@ -34,6 +34,7 @@ vars:
 default-rule-path: /var/lib/suricata/rules
 rule-files:
   - suricata.rules
+  - custom.rules
 
 # Outputs
 outputs:
@@ -98,7 +99,7 @@ logging:
 
 # AF Packet configuration
 af-packet:
-  - interface: wlp4s0
+  - interface: wlp45s0
     cluster-id: 99
     cluster-type: cluster_flow
     defrag: yes

@@ -1,6 +1,7 @@
 package tn.rnu.eniso.fwk.scan.core.ws.rest;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.context.event.EventListener;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -12,6 +13,7 @@ import tn.rnu.eniso.fwk.scan.core.infra.model.Alert;
 import tn.rnu.eniso.fwk.scan.core.infra.model.AlertSeverity;
 import tn.rnu.eniso.fwk.scan.core.infra.model.AlertStatistics;
 import tn.rnu.eniso.fwk.scan.core.service.api.SuricataService;
+import tn.rnu.eniso.fwk.scan.core.service.impl.AlertEvent;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -27,6 +29,15 @@ public class SuricataController {
 
     // Store SSE emitters for real-time alert streaming
     private final List<SseEmitter> emitters = new CopyOnWriteArrayList<>();
+
+    /**
+     * Event listener for AlertEvent - broadcasts alerts to all connected SSE
+     * clients
+     */
+    @EventListener
+    public void handleAlertEvent(AlertEvent event) {
+        broadcastAlert(event.getAlert());
+    }
 
     @GetMapping("/alerts")
     public ResponseEntity<Page<Alert>> getAlerts(

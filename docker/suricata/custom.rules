@@ -1,0 +1,43 @@
+# Custom Suricata Rules for Testing
+# These rules are designed to trigger alerts for common attack patterns
+
+# SQL Injection Detection
+alert http any any -> any any (msg:"CUSTOM SQL Injection Attempt Detected"; flow:established,to_server; content:"' OR '1'='1"; http_uri; nocase; classtype:web-application-attack; sid:1000001; rev:1;)
+alert http any any -> any any (msg:"CUSTOM SQL Injection UNION SELECT"; flow:established,to_server; content:"UNION"; http_uri; nocase; content:"SELECT"; http_uri; nocase; distance:0; classtype:web-application-attack; sid:1000002; rev:1;)
+alert http any any -> any any (msg:"CUSTOM SQL Injection DROP TABLE"; flow:established,to_server; content:"DROP"; http_uri; nocase; content:"TABLE"; http_uri; nocase; distance:0; classtype:web-application-attack; sid:1000003; rev:1;)
+
+# XSS (Cross-Site Scripting) Detection
+alert http any any -> any any (msg:"CUSTOM XSS Attack - Script Tag"; flow:established,to_server; content:"<script"; http_uri; nocase; classtype:web-application-attack; sid:1000004; rev:1;)
+alert http any any -> any any (msg:"CUSTOM XSS Attack - JavaScript Event"; flow:established,to_server; content:"javascript:"; http_uri; nocase; classtype:web-application-attack; sid:1000005; rev:1;)
+alert http any any -> any any (msg:"CUSTOM XSS Attack - onerror"; flow:established,to_server; content:"onerror="; http_uri; nocase; classtype:web-application-attack; sid:1000006; rev:1;)
+
+# Suspicious User Agents
+alert http any any -> any any (msg:"CUSTOM Suspicious User-Agent - SQLMap"; flow:established,to_server; content:"User-Agent|3a| sqlmap"; http_header; nocase; classtype:web-application-attack; sid:1000007; rev:1;)
+alert http any any -> any any (msg:"CUSTOM Suspicious User-Agent - Nikto"; flow:established,to_server; content:"User-Agent|3a| Nikto"; http_header; nocase; classtype:web-application-attack; sid:1000008; rev:1;)
+alert http any any -> any any (msg:"CUSTOM Suspicious User-Agent - Nmap"; flow:established,to_server; content:"User-Agent|3a| Nmap"; http_header; nocase; classtype:web-application-attack; sid:1000009; rev:1;)
+
+# Port Scanning Detection
+alert tcp any any -> any [1:1024] (msg:"CUSTOM Port Scan Detected - Low Ports"; flags:S; threshold:type both, track by_src, count 10, seconds 60; classtype:attempted-recon; sid:1000010; rev:1;)
+alert tcp any any -> any any (msg:"CUSTOM Rapid SYN Scan"; flags:S; threshold:type both, track by_src, count 20, seconds 10; classtype:attempted-recon; sid:1000011; rev:1;)
+
+# Command Injection
+alert http any any -> any any (msg:"CUSTOM Command Injection - Pipe Character"; flow:established,to_server; content:"|7c|"; http_uri; content:"cat"; http_uri; nocase; distance:0; classtype:web-application-attack; sid:1000012; rev:1;)
+alert http any any -> any any (msg:"CUSTOM Command Injection - Semicolon"; flow:established,to_server; content:"|3b|"; http_uri; content:"ls"; http_uri; nocase; distance:0; classtype:web-application-attack; sid:1000013; rev:1;)
+
+# Directory Traversal
+alert http any any -> any any (msg:"CUSTOM Directory Traversal Attempt"; flow:established,to_server; content:"../"; http_uri; classtype:web-application-attack; sid:1000014; rev:1;)
+alert http any any -> any any (msg:"CUSTOM Directory Traversal - Windows"; flow:established,to_server; content:"..\\"; http_uri; classtype:web-application-attack; sid:1000015; rev:1;)
+
+# Suspicious DNS Queries
+alert dns any any -> any any (msg:"CUSTOM Suspicious DNS Query - Malware Domain"; dns_query; content:"malware"; nocase; classtype:trojan-activity; sid:1000016; rev:1;)
+alert dns any any -> any any (msg:"CUSTOM Suspicious DNS Query - Phishing Domain"; dns_query; content:"phishing"; nocase; classtype:trojan-activity; sid:1000017; rev:1;)
+
+# SSH Brute Force
+alert tcp any any -> any 22 (msg:"CUSTOM SSH Brute Force Attempt"; flags:S; threshold:type both, track by_src, count 5, seconds 60; classtype:attempted-admin; sid:1000018; rev:1;)
+
+# HTTP Flooding / DDoS
+alert http any any -> any any (msg:"CUSTOM Potential HTTP Flood"; flow:established,to_server; threshold:type both, track by_src, count 50, seconds 10; classtype:attempted-dos; sid:1000019; rev:1;)
+
+# File Upload Attempts
+alert http any any -> any any (msg:"CUSTOM Suspicious File Upload - PHP"; flow:established,to_server; content:"Content-Type|3a| multipart/form-data"; http_header; content:".php"; http_client_body; nocase; classtype:web-application-attack; sid:1000020; rev:1;)
+alert http any any -> any any (msg:"CUSTOM Suspicious File Upload - JSP"; flow:established,to_server; content:"Content-Type|3a| multipart/form-data"; http_header; content:".jsp"; http_client_body; nocase; classtype:web-application-attack; sid:1000021; rev:1;)

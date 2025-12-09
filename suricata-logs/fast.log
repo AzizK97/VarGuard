@@ -1,0 +1,294 @@
+12/08/2025-12:25:38.762556  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.31.212:35504 -> 172.64.66.1:443
+12/08/2025-12:25:49.708303  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.31.212:34494 -> 104.208.16.90:443
+12/08/2025-12:25:57.784419  [**] [1:2210054:1] SURICATA STREAM excessive retransmissions [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 192.168.31.212:50186 -> 172.64.66.1:443
+12/08/2025-12:26:02.251162  [**] [1:2210054:1] SURICATA STREAM excessive retransmissions [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 192.168.31.212:35490 -> 172.64.66.1:443
+12/08/2025-12:26:02.264688  [**] [1:2210054:1] SURICATA STREAM excessive retransmissions [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 192.168.31.212:35514 -> 172.64.66.1:443
+12/08/2025-12:26:22.302991  [**] [1:2210054:1] SURICATA STREAM excessive retransmissions [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 192.168.31.212:36644 -> 172.64.66.1:443
+12/08/2025-12:27:06.124267  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.31.212:49228 -> 20.189.173.28:443
+12/08/2025-12:27:08.662679  [**] [1:2210024:3] SURICATA STREAM ESTABLISHED SYNACK resend with different seq [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 20.189.173.28:443 -> 192.168.31.212:49228
+12/08/2025-12:27:08.662681  [**] [1:2210024:3] SURICATA STREAM ESTABLISHED SYNACK resend with different seq [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 20.189.173.28:443 -> 192.168.31.212:49234
+12/08/2025-12:27:12.456720  [**] [1:2210054:1] SURICATA STREAM excessive retransmissions [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 192.168.31.212:59022 -> 172.64.66.1:443
+12/08/2025-12:27:17.319856  [**] [1:2210023:3] SURICATA STREAM ESTABLISHED SYNACK resend with different ACK [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 20.189.173.28:443 -> 192.168.31.212:49250
+12/08/2025-12:28:07.308285  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.31.212:40912 -> 195.135.223.50:80
+12/08/2025-12:29:02.605295  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.31.212:41280 -> 34.54.84.110:443
+12/08/2025-12:30:00.311132  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.31.212:58878 -> 13.107.5.93:443
+12/08/2025-12:31:02.212853  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.31.212:49266 -> 172.217.171.193:443
+12/08/2025-12:35:00.530801  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.31.212:53262 -> 34.54.84.110:443
+12/08/2025-15:28:28.845165  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:39219 -> 192.168.31.212:6443
+12/08/2025-15:28:39.711247  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:56456 -> 192.168.31.212:6443
+12/08/2025-15:31:11.287849  [**] [1:2200121:1] SURICATA Ethertype unknown [**] [Classification: Generic Protocol Command Decode] [Priority: 3] [**] [Raw pkt: FF FF FF FF FF FF E4 AA EA 5D 10 D1 00 06 00 01 AF 81 01 00 ]
+12/08/2025-16:18:40.491830  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:45400 -> 34.54.84.110:443
+12/08/2025-16:19:12.287095  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:46666 -> 34.54.84.110:443
+12/08/2025-16:20:15.350323  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:49570 -> 54.167.195.110:443
+12/08/2025-16:20:44.063488  [**] [1:2210054:1] SURICATA STREAM excessive retransmissions [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 192.168.100.39:53066 -> 172.64.66.1:443
+12/08/2025-16:21:33.869664  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:51810 -> 34.172.121.65:443
+12/08/2025-16:23:47.079913  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:43136 -> 108.177.15.81:443
+12/08/2025-16:23:58.306407  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:54500 -> 34.236.199.203:443
+12/08/2025-16:24:19.902576  [**] [1:2210054:1] SURICATA STREAM excessive retransmissions [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 192.168.100.39:39586 -> 20.189.173.15:443
+12/08/2025-16:25:19.947774  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:49800 -> 34.54.84.110:443
+12/08/2025-16:25:39.673259  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:60174 -> 34.54.84.110:443
+12/08/2025-16:26:06.608981  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:37582 -> 34.199.234.13:443
+12/08/2025-16:27:45.981174  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:51441 -> 13.39.208.199:443
+12/08/2025-16:33:03.311703  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:40606 -> 34.120.208.123:443
+12/08/2025-16:35:07.727415  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:38494 -> 199.232.81.91:443
+12/08/2025-16:37:44.127266  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:55654 -> 13.107.5.93:443
+12/08/2025-16:44:25.670176  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:42668 -> 74.125.206.81:443
+12/08/2025-16:44:30.018202  [**] [1:2210044:2] SURICATA STREAM Packet with invalid timestamp [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 74.125.206.81:443 -> 192.168.100.39:42750
+12/08/2025-16:44:30.155935  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:42784 -> 74.125.206.81:443
+12/08/2025-16:49:53.747957  [**] [1:2210044:2] SURICATA STREAM Packet with invalid timestamp [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 216.239.36.223:443 -> 192.168.100.39:55026
+12/08/2025-16:55:31.424694  [**] [1:2210044:2] SURICATA STREAM Packet with invalid timestamp [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 34.54.84.110:443 -> 192.168.100.39:33496
+12/08/2025-16:58:22.681461  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:46218 -> 108.157.188.82:443
+12/08/2025-17:02:10.576059  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:53738 -> 34.54.84.110:443
+12/08/2025-17:04:15.908504  [**] [1:2210054:1] SURICATA STREAM excessive retransmissions [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 216.239.36.223:443 -> 192.168.100.39:34406
+12/08/2025-17:04:34.964539  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:50242 -> 195.135.223.50:80
+12/08/2025-18:15:10.894968  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:33580 -> 142.250.102.81:443
+12/08/2025-18:15:14.336134  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:29166 -> 192.168.100.39:6443
+12/08/2025-18:15:31.871134  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:57151 -> 192.168.100.39:6443
+12/08/2025-18:15:34.920604  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:55192 -> 192.168.100.39:6443
+12/08/2025-18:15:46.144118  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:55192 -> 192.168.100.39:6443
+12/08/2025-18:15:54.911147  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:4793 -> 192.168.100.39:6443
+12/08/2025-18:16:06.687130  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:27962 -> 192.168.100.39:6443
+12/08/2025-18:16:18.144131  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:18207 -> 192.168.100.39:6443
+12/08/2025-18:16:27.167130  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:60719 -> 192.168.100.39:6443
+12/08/2025-18:16:39.193889  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:40334 -> 52.204.82.43:443
+12/08/2025-18:16:39.455168  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:27111 -> 192.168.100.39:6443
+12/08/2025-18:16:46.431151  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:49214 -> 192.168.100.39:6443
+12/08/2025-18:17:00.959142  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:13420 -> 192.168.100.39:6443
+12/08/2025-18:17:19.903136  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:46314 -> 192.168.100.39:6443
+12/08/2025-18:17:29.439129  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:26964 -> 192.168.100.39:6443
+12/08/2025-18:17:41.919138  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:32039 -> 192.168.100.39:6443
+12/08/2025-18:17:56.384097  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:37925 -> 192.168.100.39:6443
+12/08/2025-18:18:02.890481  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:18076 -> 192.168.100.39:6443
+12/08/2025-18:18:10.079104  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:42452 -> 192.168.100.39:6443
+12/08/2025-18:18:19.935185  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:50648 -> 192.168.100.39:6443
+12/08/2025-18:18:36.191163  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:37026 -> 192.168.100.39:10250
+12/08/2025-18:19:08.415955  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:58611 -> 192.168.100.39:6443
+12/08/2025-18:19:16.127117  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:47816 -> 192.168.100.39:6443
+12/08/2025-18:19:26.303185  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:64394 -> 192.168.100.39:6443
+12/08/2025-18:19:37.120116  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:37236 -> 192.168.100.39:6443
+12/08/2025-18:20:20.640129  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:37691 -> 192.168.100.39:10250
+12/08/2025-18:20:28.832111  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:19993 -> 192.168.100.39:6443
+12/08/2025-18:20:38.048133  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:49658 -> 192.168.100.39:6443
+12/08/2025-18:20:49.823100  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:53309 -> 192.168.100.39:6443
+12/08/2025-18:20:53.225387  [**] [1:2052510:1] ET INFO Acunetix Web Vulnerability Scanning Serice Domain in DNS Lookup (testphp .vulnweb .com) [**] [Classification: Misc activity] [Priority: 3] {UDP} 192.168.169.146:34185 -> 192.168.169.171:53
+12/08/2025-18:20:53.225399  [**] [1:2052510:1] ET INFO Acunetix Web Vulnerability Scanning Serice Domain in DNS Lookup (testphp .vulnweb .com) [**] [Classification: Misc activity] [Priority: 3] {UDP} 192.168.169.146:34185 -> 192.168.169.171:53
+12/08/2025-18:20:56.259152  [**] [1:1000004:1] CUSTOM XSS Attack - Script Tag [**] [Classification: Web Application Attack] [Priority: 1] {TCP} 192.168.169.146:53682 -> 44.228.249.3:80
+12/08/2025-18:21:02.943103  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:31427 -> 192.168.100.39:6443
+12/08/2025-18:21:03.981113  [**] [1:1000007:1] CUSTOM Suspicious User-Agent - SQLMap [**] [Classification: Web Application Attack] [Priority: 1] {TCP} 192.168.169.146:45182 -> 23.192.228.84:80
+12/08/2025-18:21:10.052018  [**] [1:1000016:1] CUSTOM Suspicious DNS Query - Malware Domain [**] [Classification: A Network Trojan was detected] [Priority: 1] {UDP} 192.168.169.146:55740 -> 8.8.8.8:53
+12/08/2025-18:21:10.217477  [**] [1:1000016:1] CUSTOM Suspicious DNS Query - Malware Domain [**] [Classification: A Network Trojan was detected] [Priority: 1] {UDP} 192.168.169.146:59159 -> 8.8.8.8:53
+12/08/2025-18:21:10.354599  [**] [1:1000017:1] CUSTOM Suspicious DNS Query - Phishing Domain [**] [Classification: A Network Trojan was detected] [Priority: 1] {UDP} 192.168.169.146:43749 -> 8.8.8.8:53
+12/08/2025-18:21:10.467873  [**] [1:1000017:1] CUSTOM Suspicious DNS Query - Phishing Domain [**] [Classification: A Network Trojan was detected] [Priority: 1] {UDP} 192.168.169.146:33077 -> 8.8.8.8:53
+12/08/2025-18:21:33.856091  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:36408 -> 192.168.100.39:6443
+12/08/2025-18:21:40.959101  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:33497 -> 192.168.100.39:6443
+12/08/2025-18:21:49.599116  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:30503 -> 192.168.100.39:10250
+12/08/2025-18:22:01.631109  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:16896 -> 192.168.100.39:6443
+12/08/2025-18:22:12.512119  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:3004 -> 192.168.100.39:6443
+12/08/2025-18:22:47.199139  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:8736 -> 192.168.100.39:6443
+12/08/2025-18:22:52.703145  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:55554 -> 192.168.100.39:6443
+12/08/2025-18:23:02.522924  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:57921 -> 192.168.100.39:6443
+12/08/2025-18:23:12.672116  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:36315 -> 192.168.100.39:6443
+12/08/2025-18:23:23.743142  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:8271 -> 192.168.100.39:10250
+12/08/2025-18:23:38.719237  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:28133 -> 192.168.100.39:10250
+12/08/2025-18:23:50.048120  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:46983 -> 192.168.100.39:6443
+12/08/2025-18:23:57.856106  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:13046 -> 192.168.100.39:6443
+12/08/2025-18:24:08.735144  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:23646 -> 192.168.100.39:10250
+12/08/2025-18:24:15.263137  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:46219 -> 192.168.100.39:6443
+12/08/2025-18:24:25.375130  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:15747 -> 192.168.100.39:6443
+12/08/2025-18:24:38.113492  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:23379 -> 192.168.100.39:6443
+12/08/2025-18:24:50.656100  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:7025 -> 192.168.100.39:10250
+12/08/2025-18:25:02.560112  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:21317 -> 192.168.100.39:10250
+12/08/2025-18:25:08.703118  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:21317 -> 192.168.100.39:10250
+12/08/2025-18:25:11.583082  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:37024 -> 34.54.84.110:443
+12/08/2025-18:25:17.216110  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:47745 -> 192.168.100.39:6443
+12/08/2025-18:25:27.712095  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:38234 -> 192.168.100.39:6443
+12/08/2025-18:25:36.672119  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:10053 -> 192.168.100.39:6443
+12/08/2025-18:25:49.599093  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:27262 -> 192.168.100.39:6443
+12/08/2025-18:26:00.223176  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:1402 -> 192.168.100.39:6443
+12/08/2025-18:26:13.023080  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:56234 -> 34.54.84.110:443
+12/08/2025-18:26:19.604095  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:42576 -> 104.18.39.21:443
+12/08/2025-18:26:21.023115  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:11804 -> 192.168.100.39:6443
+12/08/2025-18:26:30.687115  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:44671 -> 192.168.100.39:6443
+12/08/2025-18:26:39.776083  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:33839 -> 192.168.100.39:6443
+12/08/2025-18:26:49.055127  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:58256 -> 192.168.100.39:6443
+12/08/2025-18:27:01.540280  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:55180 -> 192.168.100.39:10250
+12/08/2025-18:27:16.535295  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:21788 -> 192.168.100.39:10250
+12/08/2025-18:27:21.248077  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:45875 -> 192.168.100.39:6443
+12/08/2025-18:27:31.680188  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:35088 -> 192.168.100.39:6443
+12/08/2025-18:27:42.623148  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:60029 -> 192.168.100.39:6443
+12/08/2025-18:27:45.763929  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:43220 -> 142.250.102.81:443
+12/08/2025-18:27:51.199107  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:19371 -> 192.168.100.39:6443
+12/08/2025-18:28:00.672194  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:25932 -> 192.168.100.39:6443
+12/08/2025-18:28:12.703126  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:4579 -> 192.168.100.39:6443
+12/08/2025-18:28:21.983102  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:8096 -> 192.168.100.39:6443
+12/08/2025-18:28:25.183077  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:50984 -> 108.157.188.82:443
+12/08/2025-18:28:33.243472  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:32258 -> 192.168.100.39:6443
+12/08/2025-18:28:42.719118  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:58518 -> 192.168.100.39:10250
+12/08/2025-18:28:52.639134  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:30909 -> 192.168.100.39:6443
+12/08/2025-18:29:05.696075  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:14868 -> 192.168.100.39:6443
+12/08/2025-18:29:12.287100  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:36624 -> 192.168.100.39:6443
+12/08/2025-18:29:22.719136  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:2115 -> 192.168.100.39:6443
+12/08/2025-18:29:34.624148  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:32095 -> 192.168.100.39:10250
+12/08/2025-18:29:35.711091  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:39384 -> 104.16.98.215:443
+12/08/2025-18:29:47.295109  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:51820 -> 192.168.100.39:6443
+12/08/2025-18:29:53.951181  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:46052 -> 192.168.100.39:6443
+12/08/2025-18:30:05.984091  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:4181 -> 192.168.100.39:6443
+12/08/2025-18:30:16.160168  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:4181 -> 192.168.100.39:6443
+12/08/2025-18:30:24.736130  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:6380 -> 192.168.100.39:6443
+12/08/2025-18:30:33.887127  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:26664 -> 192.168.100.39:6443
+12/08/2025-18:30:45.215119  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:28437 -> 192.168.100.39:6443
+12/08/2025-18:30:53.922726  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:36462 -> 142.250.102.81:443
+12/08/2025-18:30:58.591138  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:60709 -> 192.168.100.39:6443
+12/08/2025-18:31:04.607128  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:36014 -> 192.168.100.39:6443
+12/08/2025-18:31:15.359129  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:2359 -> 192.168.100.39:6443
+12/08/2025-18:31:28.543114  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:54393 -> 192.168.100.39:6443
+12/08/2025-18:31:35.135117  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:36554 -> 192.168.100.39:6443
+12/08/2025-18:31:41.094090  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:58116 -> 34.54.84.110:443
+12/08/2025-18:31:47.551174  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:56281 -> 192.168.100.39:6443
+12/08/2025-18:31:57.728118  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:62394 -> 192.168.100.39:10250
+12/08/2025-18:32:07.007104  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:15591 -> 192.168.100.39:6443
+12/08/2025-18:32:17.567128  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:31949 -> 192.168.100.39:10250
+12/08/2025-18:32:29.855111  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:43655 -> 192.168.100.39:6443
+12/08/2025-18:32:36.127141  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:60905 -> 192.168.100.39:6443
+12/08/2025-18:32:39.785375  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:59222 -> 34.54.84.110:443
+12/08/2025-18:32:53.919132  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:49178 -> 192.168.100.39:6443
+12/08/2025-18:35:15.460851  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:53984 -> 20.50.88.238:443
+12/08/2025-18:36:03.337602  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:41446 -> 18.66.196.69:443
+12/08/2025-18:36:28.397267  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:53396 -> 74.125.109.102:443
+12/08/2025-18:37:53.905326  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:52688 -> 35.166.21.100:443
+12/08/2025-18:39:01.742677  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:58414 -> 44.231.182.240:443
+12/08/2025-18:39:27.500433  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:46948 -> 34.107.221.82:80
+12/08/2025-18:39:31.229822  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:32864 -> 104.16.103.112:443
+12/08/2025-18:44:43.588760  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:51080 -> 140.82.121.6:443
+12/08/2025-18:45:55.797363  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:39800 -> 74.125.206.81:443
+12/08/2025-18:51:18.647914  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:58002 -> 74.125.206.81:443
+12/08/2025-18:52:23.524927  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:44488 -> 197.26.10.78:443
+12/08/2025-18:55:58.126271  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:59462 -> 34.107.221.82:80
+12/08/2025-18:59:38.058149  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:50112 -> 104.18.19.12:443
+12/08/2025-19:01:32.068631  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:42048 -> 34.54.84.110:443
+12/08/2025-19:02:32.096763  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:53926 -> 34.54.84.110:443
+12/08/2025-19:05:00.117765  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:56442 -> 34.54.84.110:443
+12/08/2025-19:08:01.751710  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:36100 -> 142.250.180.129:443
+12/08/2025-19:09:57.385830  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:33396 -> 142.250.180.170:443
+12/08/2025-19:21:14.738920  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:44320 -> 74.125.206.81:443
+12/08/2025-19:22:19.565323  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.169.146:45626 -> 20.189.173.14:443
+12/09/2025-12:04:29.649472  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:17720 -> 192.168.169.146:6443
+12/09/2025-12:04:41.105489  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:6101 -> 192.168.169.146:6443
+12/09/2025-12:04:46.072462  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:46914 -> 64.233.184.82:443
+12/09/2025-12:04:49.183987  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:53684 -> 199.232.81.91:80
+12/09/2025-12:06:08.666268  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:43718 -> 34.54.84.110:443
+12/09/2025-12:06:28.744374  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:46526 -> 199.232.81.91:80
+12/09/2025-12:06:35.210647  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:37288 -> 99.86.171.5:443
+12/09/2025-12:07:01.062467  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:44030 -> 134.76.12.6:443
+12/09/2025-12:07:04.144866  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:58106 -> 199.232.81.91:80
+12/09/2025-12:07:05.830671  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:58110 -> 199.232.81.91:80
+12/09/2025-12:07:14.699443  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:38992 -> 199.232.81.91:80
+12/09/2025-12:07:16.598400  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:35656 -> 195.135.223.226:80
+12/09/2025-12:07:28.295633  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:57276 -> 199.232.81.91:80
+12/09/2025-12:07:28.348235  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:57276 -> 199.232.81.91:80
+12/09/2025-12:07:38.768737  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:33446 -> 199.232.81.91:80
+12/09/2025-12:07:38.824049  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:33446 -> 199.232.81.91:80
+12/09/2025-12:08:03.345915  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:52292 -> 195.135.223.226:80
+12/09/2025-12:08:06.352298  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:36496 -> 199.232.81.91:80
+12/09/2025-12:08:14.425751  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:55810 -> 199.232.81.91:80
+12/09/2025-12:08:16.760857  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:55822 -> 199.232.81.91:80
+12/09/2025-12:08:25.193855  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:39232 -> 199.232.81.91:80
+12/09/2025-12:08:25.523571  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:35348 -> 134.76.12.6:443
+12/09/2025-12:08:35.866840  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:54028 -> 199.232.81.91:80
+12/09/2025-12:08:38.132329  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:53654 -> 18.245.175.52:443
+12/09/2025-12:08:48.544072  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:48482 -> 199.232.81.91:80
+12/09/2025-12:08:48.846032  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:47080 -> 134.76.12.6:443
+12/09/2025-12:08:59.542411  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:50648 -> 199.232.81.91:80
+12/09/2025-12:08:59.816575  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:47208 -> 134.76.12.6:443
+12/09/2025-12:09:01.983392  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:50658 -> 199.232.81.91:80
+12/09/2025-12:09:07.136391  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:37534 -> 199.232.81.91:80
+12/09/2025-12:09:07.413355  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:37782 -> 108.177.15.81:443
+12/09/2025-12:09:17.762355  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:60022 -> 199.232.81.91:80
+12/09/2025-12:09:20.624750  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:33016 -> 134.76.12.6:443
+12/09/2025-12:09:29.988638  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:37670 -> 199.232.81.91:80
+12/09/2025-12:09:32.735782  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:42680 -> 134.76.12.6:443
+12/09/2025-12:09:41.866052  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:34888 -> 199.232.81.91:80
+12/09/2025-12:09:44.466425  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:45910 -> 199.232.81.91:80
+12/09/2025-12:09:52.564068  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:45934 -> 199.232.81.91:80
+12/09/2025-12:09:54.573425  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:53484 -> 199.232.81.91:80
+12/09/2025-12:10:04.657335  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:51024 -> 134.76.12.6:443
+12/09/2025-12:10:06.861663  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:43132 -> 199.232.81.91:80
+12/09/2025-12:10:16.004647  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:50248 -> 199.232.81.91:80
+12/09/2025-12:10:18.441674  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:50262 -> 199.232.81.91:80
+12/09/2025-12:10:25.466213  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:39836 -> 199.232.81.91:80
+12/09/2025-12:10:28.233298  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:39838 -> 199.232.81.91:80
+12/09/2025-12:10:37.206499  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:55560 -> 134.76.12.6:443
+12/09/2025-12:10:38.786939  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:38110 -> 199.232.81.91:80
+12/09/2025-12:10:45.487550  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:48550 -> 197.155.77.1:80
+12/09/2025-12:10:54.358674  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:48550 -> 197.155.77.1:80
+12/09/2025-12:11:04.370352  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:48550 -> 197.155.77.1:80
+12/09/2025-12:11:14.389731  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:48550 -> 197.155.77.1:80
+12/09/2025-12:11:24.405700  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:48550 -> 197.155.77.1:80
+12/09/2025-12:11:34.608517  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:48550 -> 197.155.77.1:80
+12/09/2025-12:11:43.278417  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:42978 -> 199.232.81.91:443
+12/09/2025-12:11:43.470510  [**] [1:2210054:1] SURICATA STREAM excessive retransmissions [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 197.155.77.1:80 -> 192.168.100.39:48550
+12/09/2025-12:11:44.097152  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:52348 -> 192.178.202.95:443
+12/09/2025-12:11:44.444148  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:48550 -> 197.155.77.1:80
+12/09/2025-12:11:44.584618  [**] [1:2210044:2] SURICATA STREAM Packet with invalid timestamp [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 199.232.81.91:443 -> 192.168.100.39:52158
+12/09/2025-12:11:55.180821  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:48550 -> 197.155.77.1:80
+12/09/2025-12:11:57.012709  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:35408 -> 216.58.205.206:443
+12/09/2025-12:12:04.427726  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:48550 -> 197.155.77.1:80
+12/09/2025-12:12:15.005899  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:48550 -> 197.155.77.1:80
+12/09/2025-12:12:42.346838  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:38552 -> 34.120.208.123:443
+12/09/2025-12:13:03.663774  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:58376 -> 197.155.77.1:80
+12/09/2025-12:13:18.166958  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:48370 -> 199.232.81.91:80
+12/09/2025-12:13:20.768426  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:38894 -> 195.135.223.226:80
+12/09/2025-12:13:23.608952  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:58402 -> 195.135.223.226:80
+12/09/2025-12:13:29.302473  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:52788 -> 199.232.81.91:80
+12/09/2025-12:13:34.586925  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:55650 -> 18.245.175.52:443
+12/09/2025-12:13:41.059808  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:44670 -> 199.232.81.91:80
+12/09/2025-12:13:52.248197  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:55050 -> 151.101.193.91:80
+12/09/2025-12:13:54.835070  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:45552 -> 74.125.206.81:443
+12/09/2025-12:13:57.202818  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:36480 -> 197.155.77.1:80
+12/09/2025-12:14:04.713820  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:36480 -> 197.155.77.1:80
+12/09/2025-12:14:15.214773  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:53920 -> 197.155.77.1:80
+12/09/2025-12:14:24.834874  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:53920 -> 197.155.77.1:80
+12/09/2025-12:14:34.861563  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:53920 -> 197.155.77.1:80
+12/09/2025-12:14:44.967331  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:36122 -> 197.155.77.1:80
+12/09/2025-12:14:55.235245  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:53920 -> 197.155.77.1:80
+12/09/2025-12:15:05.081190  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:53920 -> 197.155.77.1:80
+12/09/2025-12:15:07.668188  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:40256 -> 108.177.15.81:443
+12/09/2025-12:15:15.094339  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:53920 -> 197.155.77.1:80
+12/09/2025-12:15:25.094550  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:37248 -> 197.155.77.1:80
+12/09/2025-12:15:30.013974  [**] [1:2210054:1] SURICATA STREAM excessive retransmissions [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 197.155.77.1:80 -> 192.168.100.39:37248
+12/09/2025-12:15:35.131187  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:48392 -> 197.155.77.1:80
+12/09/2025-12:15:35.883249  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:40424 -> 197.155.77.1:80
+12/09/2025-12:15:45.095164  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:40424 -> 197.155.77.1:80
+12/09/2025-12:15:55.108695  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:40424 -> 197.155.77.1:80
+12/09/2025-12:16:08.361609  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:40424 -> 197.155.77.1:80
+12/09/2025-12:16:20.108678  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:40424 -> 197.155.77.1:80
+12/09/2025-12:16:29.671563  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:40424 -> 197.155.77.1:80
+12/09/2025-12:16:39.637842  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:40424 -> 197.155.77.1:80
+12/09/2025-12:16:49.772692  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:40424 -> 197.155.77.1:80
+12/09/2025-12:16:59.980742  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:40424 -> 197.155.77.1:80
+12/09/2025-12:17:09.661167  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:38770 -> 35.166.21.100:443
+12/09/2025-12:17:26.199326  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:57360 -> 35.166.21.100:443
+12/09/2025-12:18:01.840498  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:44296 -> 151.101.193.91:80
+12/09/2025-12:18:04.300543  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:51518 -> 195.135.223.226:80
+12/09/2025-12:18:13.614298  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:56388 -> 151.101.1.91:80
+12/09/2025-12:18:15.671808  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:42168 -> 151.101.129.91:80
+12/09/2025-12:18:15.671808  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:42168 -> 151.101.129.91:80
+12/09/2025-12:18:23.609021  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:34424 -> 151.101.1.91:80
+12/09/2025-12:18:25.945515  [**] [1:1000011:1] CUSTOM Rapid SYN Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:53162 -> 99.86.171.27:443
+12/09/2025-12:18:28.686224  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:54850 -> 197.155.77.1:80
+12/09/2025-12:18:35.134524  [**] [1:2210054:1] SURICATA STREAM excessive retransmissions [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 192.168.100.39:54850 -> 197.155.77.1:80
+12/09/2025-12:18:38.887701  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:45654 -> 197.155.77.1:80
+12/09/2025-12:18:48.976367  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:45654 -> 197.155.77.1:80
+12/09/2025-12:18:58.978551  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:45654 -> 197.155.77.1:80
+12/09/2025-12:19:09.006277  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:52862 -> 197.155.77.1:80
+12/09/2025-12:19:19.082524  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:52862 -> 197.155.77.1:80
+12/09/2025-12:19:28.974914  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:52862 -> 197.155.77.1:80
+12/09/2025-12:19:38.998259  [**] [1:1000019:1] CUSTOM Potential HTTP Flood [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 192.168.100.39:52862 -> 197.155.77.1:80
+12/09/2025-12:19:39.615684  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:56068 -> 64.233.184.81:443
+12/09/2025-12:20:19.916131  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:45158 -> 199.232.81.91:80
+12/09/2025-12:23:43.601306  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:53406 -> 52.204.82.43:443
+12/09/2025-12:30:07.665844  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:46556 -> 44.217.237.199:443
+12/09/2025-12:34:09.410491  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:50416 -> 13.107.5.93:443
+12/09/2025-12:41:17.780933  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:44220 -> 13.69.116.104:443
+12/09/2025-12:43:35.859665  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:44992 -> 34.54.84.110:443
+12/09/2025-12:44:35.901605  [**] [1:1000010:1] CUSTOM Port Scan Detected - Low Ports [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.100.39:39924 -> 34.54.84.110:443

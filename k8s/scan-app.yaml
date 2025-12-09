@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: scan-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: scan-app
+  template:
+    metadata:
+      labels:
+        app: scan-app
+    spec:
+      containers:
+      - name: scan-app
+        image: scan-app:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8080
+        env:
+        - name: SPRING_DATASOURCE_URL
+          value: jdbc:postgresql://postgres:5432/mydatabase
+        - name: SPRING_DATASOURCE_USERNAME
+          value: myuser
+        - name: SPRING_DATASOURCE_PASSWORD
+          value: secret
+        - name: ELASTICSEARCH_HOST
+          value: elasticsearch
+        - name: ELASTICSEARCH_PORT
+          value: "9200"
+        - name: SURICATA_LOG_PATH
+          value: /var/log/suricata/eve.json
+        - name: SURICATA_LOG_MONITOR_ENABLED
+          value: "true"
+        volumeMounts:
+        - name: logs
+          mountPath: /var/log/suricata
+          readOnly: true
+      volumes:
+      - name: logs
+        hostPath:
+          path: /home/turki/Projet_fwk/suricata-logs
+          type: DirectoryOrCreate
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: scan-app
+spec:
+  selector:
+    app: scan-app
+  ports:
+  - port: 8080
+    targetPort: 8080

@@ -9,7 +9,7 @@ check_alerts() {
     echo "Waiting 3 seconds for Suricata to process..."
     sleep 3
     echo "Recent alerts:"
-    curl -s http://localhost:3000/api/suricata/alerts/recent?limit=5 | jq -r '.[] | "\(.timestamp) - \(.signature) (\(.severity))"' 2>/dev/null || echo "Could not fetch alerts"
+    curl -s http://localhost:30080/api/suricata/alerts/recent?limit=5 | jq -r '.[] | "\(.timestamp) - \(.signature) (\(.severity))"' 2>/dev/null || echo "Could not fetch alerts"
     echo ""
 }
 
@@ -41,7 +41,7 @@ check_alerts
 echo "Test 5: Potential DDoS/Flooding Detection"
 echo "Sending rapid requests..."
 for i in {1..20}; do
-    curl -s http://localhost:8080/api/suricata/statistics > /dev/null 2>&1 &
+    curl -s http://localhost:30080/api/suricata/statistics > /dev/null 2>&1 &
 done
 check_alerts
 
@@ -61,5 +61,5 @@ done
 check_alerts
 
 echo "=== Test Suite Complete ==="
-echo "Check your dashboard at http://localhost:3000 for detected alerts"
-echo "Or run: curl http://localhost:3000/api/suricata/alerts/recent | jq"
+echo "Check your dashboard at http://localhost:30080 for detected alerts"
+echo "Or run: curl http://localhost:30080/api/suricata/alerts/recent | jq"
