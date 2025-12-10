@@ -1,0 +1,5 @@
+# Create a workspace called project-fwk
+apiVersion: v1
+kind: Namespace
+metadata:
+    name: project-fwk
