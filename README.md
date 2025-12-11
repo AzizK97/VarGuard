@@ -1,4 +1,4 @@
-# Network Security Monitoring System
+# VarGuard: Network Security Monitoring System
 
 > AI-powered network monitoring and vulnerability scanning platform with real-time threat detection and intelligent remediation recommendations.
 
@@ -34,46 +34,195 @@ This project is a comprehensive network security monitoring application that com
 - Python 3.x / Node.js
 - Suricata IDS
 - Nmap
-- [Other dependencies]
 ```
 
 ### Installation
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/project-name.git
-cd project-name
+[git clone https://github.com/AzizK97/VarGuard.git](https://github.com/AzizK97/VarGuard.git)
+cd VarGuard
 
-# Install dependencies
-# Add installation commands here
-
-# Configure settings
-# Add configuration steps here
-```
-
-### Usage
-
-```bash
-# Start the monitoring system
-# Add startup commands here
-
-# Access the dashboard
-# Add access instructions here
+# How to run the project
+docker compose up --build
 ```
 
 ## Project Structure
 
 ```
-project-name/
-├── src/
-│   ├── monitoring/     # Real-time monitoring modules
-│   ├── scanning/       # Vulnerability scanning
-│   ├── ai/            # AI/ML models and analysis
-│   ├── alerts/        # Alert system and notifications
-│   └── api/           # API endpoints
-├── config/            # Configuration files
-├── docs/              # Documentation
-└── tests/             # Test suite
+├── container_logs.txt
+├── dashboard
+│   ├── Dockerfile
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── nginx.conf
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── public
+│   │   └── vite.svg
+│   ├── README.md
+│   ├── src
+│   │   ├── App.css
+│   │   ├── App.tsx
+│   │   ├── assets
+│   │   │   └── react.svg
+│   │   ├── components
+│   │   │   ├── AlertCard.css
+│   │   │   ├── AlertCard.tsx
+│   │   │   ├── AlertList.css
+│   │   │   ├── AlertList.tsx
+│   │   │   ├── NetworkScan.css
+│   │   │   ├── NetworkScan.tsx
+│   │   │   ├── StatisticsCards.css
+│   │   │   └── StatisticsCards.tsx
+│   │   ├── index.css
+│   │   ├── main.tsx
+│   │   ├── services
+│   │   │   └── api.ts
+│   │   └── types
+│   │       └── index.ts
+│   ├── tsconfig.app.json
+│   ├── tsconfig.json
+│   ├── tsconfig.node.json
+│   └── vite.config.ts
+├── docker
+│   ├── Dockerfile.suricata
+│   └── suricata
+│       └── suricata.yaml
+├── docker-compose.yml
+├── full_compose_output5.log
+├── projet_sem.pdf
+├── README.md
+├── scan
+│   ├── app
+│   │   ├── app-jar
+│   │   │   ├── pom.xml
+│   │   │   └── src
+│   │   │       ├── main
+│   │   │       │   ├── java
+│   │   │       │   │   └── tn
+│   │   │       │   │       └── rnu
+│   │   │       │   │           └── eniso
+│   │   │       │   │               └── fwk
+│   │   │       │   │                   └── scan
+│   │   │       │   │                       └── ScanApplication.java
+│   │   │       │   └── resources
+│   │   │       │       └── application.properties
+│   │   │       └── test
+│   │   │           ├── java
+│   │   │           │   └── tn
+│   │   │           │       └── rnu
+│   │   │           │           └── eniso
+│   │   │           │               └── fwk
+│   │   │           │                   └── scan
+│   │   │           │                       └── ScanApplicationTests.java
+│   │   │           └── resources
+│   │   │               └── application.properties
+│   │   └── pom.xml
+│   ├── compose.yaml
+│   ├── core
+│   │   ├── dal
+│   │   │   ├── pom.xml
+│   │   │   └── src
+│   │   │       └── main
+│   │   │           └── java
+│   │   │               └── tn
+│   │   │                   └── rnu
+│   │   │                       └── eniso
+│   │   │                           └── fwk
+│   │   │                               └── scan
+│   │   │                                   └── core
+│   │   │                                       └── dal
+│   │   │                                           └── repository
+│   │   │                                               ├── AlertRepository.java
+│   │   │                                               ├── DeviceRepository.java
+│   │   │                                               ├── PortRepository.java
+│   │   │                                               └── ScanSessionRepository.java
+│   │   ├── infra
+│   │   │   ├── pom.xml
+│   │   │   └── src
+│   │   │       └── main
+│   │   │           └── java
+│   │   │               └── tn
+│   │   │                   └── rnu
+│   │   │                       └── eniso
+│   │   │                           └── fwk
+│   │   │                               └── scan
+│   │   │                                   └── core
+│   │   │                                       └── infra
+│   │   │                                           └── model
+│   │   │                                               ├── Alert.java
+│   │   │                                               ├── AlertSeverity.java
+│   │   │                                               ├── AlertStatistics.java
+│   │   │                                               ├── Device.java
+│   │   │                                               ├── Port.java
+│   │   │                                               └── ScanSession.java
+│   │   ├── pom.xml
+│   │   ├── service-api
+│   │   │   ├── pom.xml
+│   │   │   └── src
+│   │   │       └── main
+│   │   │           └── java
+│   │   │               └── tn
+│   │   │                   └── rnu
+│   │   │                       └── eniso
+│   │   │                           └── fwk
+│   │   │                               └── scan
+│   │   │                                   └── core
+│   │   │                                       └── service
+│   │   │                                           └── api
+│   │   │                                               ├── ElasticsearchService.java
+│   │   │                                               ├── NmapService.java
+│   │   │                                               └── SuricataService.java
+│   │   ├── service-impl
+│   │   │   ├── pom.xml
+│   │   │   └── src
+│   │   │       └── main
+│   │   │           └── java
+│   │   │               └── tn
+│   │   │                   └── rnu
+│   │   │                       └── eniso
+│   │   │                           └── fwk
+│   │   │                               └── scan
+│   │   │                                   └── core
+│   │   │                                       └── service
+│   │   │                                           └── impl
+│   │   │                                               ├── ElasticsearchServiceImpl.java
+│   │   │                                               ├── NmapServiceImpl.java
+│   │   │                                               ├── SuricataLogMonitor.java
+│   │   │                                               └── SuricataServiceImpl.java
+│   │   └── ws-rest
+│   │       ├── pom.xml
+│   │       └── src
+│   │           └── main
+│   │               └── java
+│   │                   └── tn
+│   │                       └── rnu
+│   │                           └── eniso
+│   │                               └── fwk
+│   │                                   └── scan
+│   │                                       └── core
+│   │                                           └── ws
+│   │                                               └── rest
+│   │                                                   ├── NmapController.java
+│   │                                                   └── SuricataController.java
+│   ├── Dockerfile
+│   ├── modules
+│   │   └── pom.xml
+│   ├── mvnw
+│   ├── mvnw.cmd
+│   └── pom.xml
+├── suricata-logs
+│   ├── eve.json
+│   ├── fast.log
+│   ├── stats.log
+│   └── suricata.log
+├── SURICATA_README.md
+├── test_advanced_attacks.sh
+├── test_attacks.sh
+├── test_focused_attacks.sh
+└── test_network_attacks.sh
+
 ```
 
 ## Roadmap
@@ -87,23 +236,10 @@ project-name/
 - [ ] Reporting system
 - [ ] Multi-network support
 
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-[Choose your license - MIT, Apache 2.0, GPL, etc.]
-
-## Contact
-
-[Your contact information]
-
 ## Acknowledgments
 
 - Suricata IDS
 - Nmap Project
-- [Other tools/libraries used]
 
 ---
 
