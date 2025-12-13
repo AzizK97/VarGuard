@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -32,6 +33,7 @@ public class SuricataServiceImpl implements SuricataService {
     private final AlertRepository alertRepository;
     private final DeviceRepository deviceRepository;
     private final ElasticsearchService elasticsearchService;
+    private final ApplicationEventPublisher eventPublisher;
     private final ObjectMapper objectMapper = createObjectMapper();
 
     private static ObjectMapper createObjectMapper() {
@@ -189,6 +191,10 @@ public class SuricataServiceImpl implements SuricataService {
             } catch (Exception e) {
                 log.warn("Failed to index alert in Elasticsearch", e);
             }
+
+            // Publish event for real-time broadcasting via SSE
+            eventPublisher.publishEvent(new AlertEvent(this, savedAlert));
+            log.debug("Published AlertEvent for real-time broadcasting");
 
         } catch (Exception e) {
             log.error("Error processing EVE log: {}", jsonLog, e);

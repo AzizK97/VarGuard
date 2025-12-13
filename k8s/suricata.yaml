@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: suricata
+  namespace: project-fwk
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: suricata
+  template:
+    metadata:
+      labels:
+        app: suricata
+    spec:
+      hostNetwork: true
+      containers:
+      - name: suricata
+        image: suricata:latest
+        imagePullPolicy: IfNotPresent
+        securityContext:
+          capabilities:
+            add: ["NET_ADMIN", "NET_RAW", "SYS_NICE"]
+        command: ["suricata", "-c", "/etc/suricata-config/suricata.yaml", "-i", "wlp4s0", "-v"]
+        volumeMounts:
+        - name: logs
+          mountPath: /var/log/suricata
+        - name: config
+          mountPath: /etc/suricata-config/suricata.yaml
+          subPath: suricata.yaml
+        - name: rules
+          mountPath: /var/lib/suricata/rules/custom.rules
+          subPath: custom.rules
+      volumes:
+      - name: logs
+        persistentVolumeClaim:
+          claimName: suricata-logs
+      - name: config
+        configMap:
+          name: suricata-config
+      - name: rules
+        configMap:
+          name: suricata-rules

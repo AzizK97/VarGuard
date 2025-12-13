@@ -16,19 +16,18 @@ const NetworkScan: React.FC = () => {
         setScanResult(null);
         setVulns(null);
         try {
-            // Trigger scan (backend might perform nmap or return cached results)
-            await suricataApi.runNmapScan(target);
-            // Fetch results
-            const res = await suricataApi.getNmapResults(target);
-            setScanResult(res as NmapScanResult);
-            // Try to fetch vulnerabilities (optional endpoint)
-            try {
-                const v = await suricataApi.getVulnerabilities(target);
-                setVulns(v as Vulnerability[]);
-            } catch (vErr) {
-                // not fatal
-                console.warn('Vuln fetch failed', vErr);
-            }
+            // Trigger scan
+            const scanResponse = await suricataApi.runNmapScan(target);
+            console.log('Scan initiated:', scanResponse);
+
+            // For now, set a mock result since the backend returns the scan session
+            // In a real implementation, you'd poll for results or get them from the response
+            setScanResult({
+                targetIp: target,
+                scannedAt: new Date().toISOString(),
+                ports: scanResponse?.devices?.[0]?.ports || [],
+            } as NmapScanResult);
+
         } catch (err: any) {
             console.error('Scan error', err);
             setError(err?.message || 'Failed to run scan');

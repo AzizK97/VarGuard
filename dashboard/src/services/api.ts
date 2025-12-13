@@ -1,7 +1,7 @@
 import axios from 'axios';
 import type { Alert, AlertStatistics, AlertSeverity } from '../types';
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8080/api';
+const API_BASE_URL = import.meta.env.VITE_API_URL || '/api';
 
 const api = axios.create({
     baseURL: API_BASE_URL,
@@ -73,20 +73,24 @@ export const suricataApi = {
 
         return eventSource;
     },
-    // Nmap scan endpoints (backend must implement these or use mock backend)
-    getNmapResults: async (targetIp: string): Promise<any> => {
-        const response = await api.get(`/network/nmap/results`, { params: { target: targetIp } });
-        return response.data;
-    },
-
+    // Nmap scan endpoints
     runNmapScan: async (targetIp: string): Promise<any> => {
-        const response = await api.post(`/network/nmap/scan`, { target: targetIp });
+        const response = await api.post(`/nmap/scan`, null, { params: { target: targetIp } });
         return response.data;
     },
 
-    // Get potential vulnerabilities for a target (optional)
-    getVulnerabilities: async (targetIp: string): Promise<any> => {
-        const response = await api.get(`/network/vulnerabilities`, { params: { target: targetIp } });
+    getNmapScans: async (): Promise<any> => {
+        const response = await api.get(`/nmap/scans`);
+        return response.data;
+    },
+
+    getNmapScanById: async (id: number): Promise<any> => {
+        const response = await api.get(`/nmap/scans/${id}`);
+        return response.data;
+    },
+
+    getNmapDevices: async (scanId: number): Promise<any> => {
+        const response = await api.get(`/nmap/scans/${scanId}/devices`);
         return response.data;
     },
 };
