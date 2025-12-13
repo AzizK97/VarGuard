@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -eshou
 
 echo "1. Building Dashboard..."
 docker build -t dashboard:latest dashboard/
