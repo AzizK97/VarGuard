@@ -4,6 +4,7 @@ metadata:
   name: postgres-data
   namespace: project-fwk
 spec:
+  storageClassName: local-path
   accessModes:
     - ReadWriteOnce
   resources:
@@ -16,6 +17,7 @@ metadata:
   name: elasticsearch-data
   namespace: project-fwk
 spec:
+  storageClassName: local-path
   accessModes:
     - ReadWriteOnce
   resources:
@@ -28,6 +30,7 @@ metadata:
   name: suricata-logs
   namespace: project-fwk
 spec:
+  storageClassName: local-path
   accessModes:
     - ReadWriteOnce
   resources:

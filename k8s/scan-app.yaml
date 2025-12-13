@@ -40,6 +40,8 @@ spec:
           value: /var/log/suricata/eve.json
         - name: SURICATA_LOG_MONITOR_ENABLED
           value: "true"
+        - name: TZ
+          value: "Africa/Tunis"
         - name: JAVA_TOOL_OPTIONS
           value: "-Delasticsearch.host=elasticsearch -Delasticsearch.port=9200 -Djava.net.preferIPv4Stack=true"
         volumeMounts:
@@ -54,6 +56,20 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
+  name: scan
+  namespace: project-fwk
+spec:
+  type: ClusterIP
+  selector:
+    app: scan-app
+  ports:
+  - port: 8080
+    targetPort: 8080
+    name: https
+---
+apiVersion: v1
+kind: Service
+metadata:
   name: scan-app
   namespace: project-fwk
 spec:
@@ -63,4 +79,5 @@ spec:
   ports:
   - port: 8080
     targetPort: 8080
-    nodePort: 30080
+    nodePort: 30082
+    name: https

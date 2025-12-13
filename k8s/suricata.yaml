@@ -22,6 +22,9 @@ spec:
           capabilities:
             add: ["NET_ADMIN", "NET_RAW", "SYS_NICE"]
         command: ["suricata", "-c", "/etc/suricata-config/suricata.yaml", "-i", "wlp4s0", "-v"]
+        env:
+        - name: TZ
+          value: "Africa/Tunis"
         volumeMounts:
         - name: logs
           mountPath: /var/log/suricata
