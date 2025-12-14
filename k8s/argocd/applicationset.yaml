@@ -36,7 +36,7 @@ spec:
       # Git source configuration
       source:
         # Replace with your actual GitHub repo URL
-        repoURL: 'https://github.com/turkimedaziz/Projet_fwk.git'
+        repoURL: 'https://github.com/turkimedaziz/Projet_fwk'
         
         # Dynamically set the branch from generator
         targetRevision: '{{branch}}'
