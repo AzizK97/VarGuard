@@ -35,7 +35,7 @@ git checkout <branch>
 cd Projet_fwk
 ```
 
-3. Suricata network configuration
+2. Suricata network configuration
 
 Run this script to configure Suricata to your machine's network interface
 
@@ -44,7 +44,7 @@ chmod +x update_suricata_network.sh
 ./update_suricata_network.sh
 ```
 
-2. Build and import images into k3s (recommended, automated):
+3. Build and import images into k3s (recommended, automated):
 
 ```bash
 chmod +x rebuild_and_setup.sh
@@ -59,7 +59,7 @@ What the script does:
 - Imports tar files into k3s containerd so Deployments with `imagePullPolicy: Never` can run
 - Deletes the tar files and restarts pods in the `project-fwk` namespace
 
-3. Apply k8s manifests (if not already applied or after edits):
+4. Apply k8s manifests (if not already applied or after edits):
 
 ```bash
 kubectl apply -f k8s/01-storage.yaml
@@ -70,14 +70,14 @@ kubectl apply -f k8s/postgres.yaml
 kubectl apply -f k8s/dashboard.yaml
 ```
 
-4. Watch pods and verify health:
+5. Watch pods and verify health:
 
 ```bash
 kubectl get pods,svc,pvc -n project-fwk -w
 kubectl describe pvc suricata-logs -n project-fwk
 ```
 
-5. Access the dashboard:
+6. Access the dashboard:
 
 ```
 http://localhost:30080
