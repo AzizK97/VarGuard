@@ -11,6 +11,7 @@
     <name>scan-core-service-impl</name>
 
     <dependencies>
+        <!-- Core modules -->
         <dependency>
             <groupId>tn.rnu.eniso.fwk</groupId>
             <artifactId>scan-core-service-api</artifactId>
@@ -49,6 +50,11 @@
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
             <version>2.15.1</version>
+        </dependency>
+        <!-- Redis for caching daily threats -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
     </dependencies>
 

@@ -34,6 +34,7 @@ public class SuricataServiceImpl implements SuricataService {
     private final DeviceRepository deviceRepository;
     private final ElasticsearchService elasticsearchService;
     private final ApplicationEventPublisher eventPublisher;
+    private final DailyThreatService dailyThreatService;
     private final ObjectMapper objectMapper = createObjectMapper();
 
     private static ObjectMapper createObjectMapper() {
@@ -195,6 +196,9 @@ public class SuricataServiceImpl implements SuricataService {
             // Publish event for real-time broadcasting via SSE
             eventPublisher.publishEvent(new AlertEvent(this, savedAlert));
             log.debug("Published AlertEvent for real-time broadcasting");
+
+            // Cache to Redis for AI analysis
+            dailyThreatService.cacheAlert(savedAlert);
 
         } catch (Exception e) {
             log.error("Error processing EVE log: {}", jsonLog, e);

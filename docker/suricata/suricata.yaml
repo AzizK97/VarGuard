@@ -5,7 +5,8 @@
 vars:
   address-groups:
 
-    HOME_NET: "[192.168.100.0/24]"
+    # Local network being monitored (where 192.168.169.146 resides)
+    HOME_NET: "[192.168.169.0/24]"
     EXTERNAL_NET: "!$HOME_NET"
     HTTP_SERVERS: "$HOME_NET"
     SMTP_SERVERS: "$HOME_NET"
