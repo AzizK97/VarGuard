@@ -1,0 +1,283 @@
+apiVersion: v1
+kind: ConfigMap 
+metadata:
+  name: suricata-config
+  namespace: project-fwk
+data:
+  suricata.yaml: |
+    %YAML 1.1
+    ---
+    
+    # Suricata configuration for IDS mode
+    vars:
+      address-groups:
+        HOME_NET: "[192.168.100.0/24]"
+        EXTERNAL_NET: "!$HOME_NET"
+        HTTP_SERVERS: "$HOME_NET"
+        SMTP_SERVERS: "$HOME_NET"
+        SQL_SERVERS: "$HOME_NET"
+        DNS_SERVERS: "$HOME_NET"
+        TELNET_SERVERS: "$HOME_NET"
+        AIM_SERVERS: "$EXTERNAL_NET"
+        DC_SERVERS: "$HOME_NET"
+        DNP3_SERVER: "$HOME_NET"
+        DNP3_CLIENT: "$HOME_NET"
+        MODBUS_CLIENT: "$HOME_NET"
+        MODBUS_SERVER: "$HOME_NET"
+        ENIP_CLIENT: "$HOME_NET"
+        ENIP_SERVER: "$HOME_NET"
+        
+      port-groups:
+        HTTP_PORTS: "80"
+        SHELLCODE_PORTS: "!80"
+        ORACLE_PORTS: 1521
+        SSH_PORTS: 22
+        DNP3_PORTS: 20000
+        MODBUS_PORTS: 502
+        FILE_DATA_PORTS: "[$HTTP_PORTS,110,143]"
+        FTP_PORTS: 21
+    
+    # Default rule path
+    default-rule-path: /var/lib/suricata/rules
+    rule-files:
+      - suricata.rules
+      - custom.rules
+    
+    # Outputs
+    outputs:
+      # EVE JSON log
+      - eve-log:
+          enabled: yes
+          filetype: regular
+          filename: eve.json
+          types:
+            - alert:
+                payload: yes
+                payload-buffer-size: 4kb
+                payload-printable: yes
+                packet: yes
+                metadata: yes
+                http-body: yes
+                http-body-printable: yes
+            - http:
+                extended: yes
+            - dns:
+                query: yes
+                answer: yes
+            - tls:
+                extended: yes
+            - files:
+                force-magic: no
+            - smtp:
+            - ssh
+            - stats:
+                totals: yes
+                threads: no
+                deltas: no
+            - flow
+    
+      # Fast log (simple alert format)
+      - fast:
+          enabled: yes
+          filename: fast.log
+          append: yes
+    
+      # Stats log
+      - stats:
+          enabled: yes
+          filename: stats.log
+          append: yes
+          totals: yes
+          threads: no
+    
+    # Logging
+    logging:
+      default-log-level: notice
+      default-output-filter:
+      outputs:
+      - console:
+          enabled: yes
+      - file:
+          enabled: yes
+          level: info
+          filename: suricata.log
+      - syslog:
+          enabled: no
+    
+    # AF Packet configuration
+    af-packet:
+      - interface: "wlp4s0"
+        cluster-id: 99
+        cluster-type: cluster_flow
+        defrag: yes
+        use-mmap: yes
+        tpacket-v3: yes
+    
+    # Stream settings
+    stream:
+      memcap: 64mb
+      checksum-validation: yes
+      inline: no
+      reassembly:
+        memcap: 256mb
+        depth: 1mb
+        toserver-chunk-size: 2560
+        toclient-chunk-size: 2560
+    
+    # Host table
+    host:
+      hash-size: 4096
+      prealloc: 1000
+      memcap: 32mb
+    
+    # Flow settings
+    flow:
+      memcap: 128mb
+      hash-size: 65536
+      prealloc: 10000
+      emergency-recovery: 30
+    
+    # Defrag settings
+    defrag:
+      memcap: 32mb
+      hash-size: 65536
+      trackers: 65535
+      max-frags: 65535
+      prealloc: yes
+      timeout: 60
+    
+    # Detection engine
+    detect:
+      profile: medium
+      custom-values:
+        toclient-groups: 3
+        toserver-groups: 25
+      sgh-mpm-context: auto
+      inspection-recursion-limit: 3000
+    
+    # Threading
+    threading:
+      set-cpu-affinity: no
+      cpu-affinity:
+        - management-cpu-set:
+            cpu: [ 0 ]
+        - receive-cpu-set:
+            cpu: [ 0 ]
+        - worker-cpu-set:
+            cpu: [ "all" ]
+      detect-thread-ratio: 1.0
+    
+    # Profiling
+    profiling:
+      rules:
+        enabled: yes
+        filename: rule_perf.log
+        append: yes
+      keywords:
+        enabled: yes
+        filename: keyword_perf.log
+        append: yes
+    
+    # PCAP log
+    pcap-log:
+      enabled: no
+      filename: log.pcap
+      limit: 1000mb
+      max-files: 2000
+      compression: none
+      mode: normal
+      use-stream-depth: no
+      honor-pass-rules: no
+    
+    # App layer protocols
+    app-layer:
+      protocols:
+        tls:
+          enabled: yes
+          detection-ports:
+            dp: 443
+        http:
+          enabled: yes
+        smtp:
+          enabled: yes
+        dns:      compression: none
+      mode: normal
+      use-stream-depth: no
+      honor-pass-rules: no
+    
+    # App layer protocols
+    app-layer:
+      protocols:
+        tls:
+          enabled: yes
+          detection-ports:
+            dp: 443
+        http:
+          enabled: yes
+        smtp:
+          enabled: yes
+        dns:
+          tcp:
+            enabled: yes
+          udp:
+            enabled: yes
+        ssh:
+          enabled: yes
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: suricata-rules
+        ssh:
+          enabled: yes
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: suricata-rules
+  namespace: project-fwk
+data:
+  custom.rules: |
+    # Custom Suricata Rules for Testing
+    # These rules are designed to trigger alerts for common attack patterns
+    
+    # SQL Injection Detection
+    alert http any any -> any any (msg:"CUSTOM SQL Injection Attempt Detected"; flow:established,to_server; content:"' OR '1'='1"; http_uri; nocase; classtype:web-application-attack; sid:1000001; rev:1;)
+    alert http any any -> any any (msg:"CUSTOM SQL Injection UNION SELECT"; flow:established,to_server; content:"UNION"; http_uri; nocase; content:"SELECT"; http_uri; nocase; distance:0; classtype:web-application-attack; sid:1000002; rev:1;)
+    alert http any any -> any any (msg:"CUSTOM SQL Injection DROP TABLE"; flow:established,to_server; content:"DROP"; http_uri; nocase; content:"TABLE"; http_uri; nocase; distance:0; classtype:web-application-attack; sid:1000003; rev:1;)
+    
+    # XSS (Cross-Site Scripting) Detection
+    alert http any any -> any any (msg:"CUSTOM XSS Attack - Script Tag"; flow:established,to_server; content:"<script"; http_uri; nocase; classtype:web-application-attack; sid:1000004; rev:1;)
+    alert http any any -> any any (msg:"CUSTOM XSS Attack - JavaScript Event"; flow:established,to_server; content:"javascript:"; http_uri; nocase; classtype:web-application-attack; sid:1000005; rev:1;)
+    alert http any any -> any any (msg:"CUSTOM XSS Attack - onerror"; flow:established,to_server; content:"onerror="; http_uri; nocase; classtype:web-application-attack; sid:1000006; rev:1;)
+    
+    # Suspicious User Agents
+    alert http any any -> any any (msg:"CUSTOM Suspicious User-Agent - SQLMap"; flow:established,to_server; content:"User-Agent|3a| sqlmap"; http_header; nocase; classtype:web-application-attack; sid:1000007; rev:1;)
+    alert http any any -> any any (msg:"CUSTOM Suspicious User-Agent - Nikto"; flow:established,to_server; content:"User-Agent|3a| Nikto"; http_header; nocase; classtype:web-application-attack; sid:1000008; rev:1;)
+    alert http any any -> any any (msg:"CUSTOM Suspicious User-Agent - Nmap"; flow:established,to_server; content:"User-Agent|3a| Nmap"; http_header; nocase; classtype:web-application-attack; sid:1000009; rev:1;)
+    
+    # Port Scanning Detection
+    alert tcp any any -> any [1:1024] (msg:"CUSTOM Port Scan Detected - Low Ports"; flags:S; threshold:type both, track by_src, count 10, seconds 60; classtype:attempted-recon; sid:1000010; rev:1;)
+    alert tcp any any -> any any (msg:"CUSTOM Rapid SYN Scan"; flags:S; threshold:type both, track by_src, count 20, seconds 10; classtype:attempted-recon; sid:1000011; rev:1;)
+    
+    # Command Injection
+    alert http any any -> any any (msg:"CUSTOM Command Injection - Pipe Character"; flow:established,to_server; content:"|7c|"; http_uri; content:"cat"; http_uri; nocase; distance:0; classtype:web-application-attack; sid:1000012; rev:1;)
+    alert http any any -> any any (msg:"CUSTOM Command Injection - Semicolon"; flow:established,to_server; content:"|3b|"; http_uri; content:"ls"; http_uri; nocase; distance:0; classtype:web-application-attack; sid:1000013; rev:1;)
+    
+    # Directory Traversal
+    alert http any any -> any any (msg:"CUSTOM Directory Traversal Attempt"; flow:established,to_server; content:"../"; http_uri; classtype:web-application-attack; sid:1000014; rev:1;)
+    alert http any any -> any any (msg:"CUSTOM Directory Traversal - Windows"; flow:established,to_server; content:"..\\"; http_uri; classtype:web-application-attack; sid:1000015; rev:1;)
+    
+    # Suspicious DNS Queries
+    alert dns any any -> any any (msg:"CUSTOM Suspicious DNS Query - Malware Domain"; dns_query; content:"malware"; nocase; classtype:trojan-activity; sid:1000016; rev:1;)
+    alert dns any any -> any any (msg:"CUSTOM Suspicious DNS Query - Phishing Domain"; dns_query; content:"phishing"; nocase; classtype:trojan-activity; sid:1000017; rev:1;)
+    
+    # SSH Brute Force
+    alert tcp any any -> any 22 (msg:"CUSTOM SSH Brute Force Attempt"; flags:S; threshold:type both, track by_src, count 5, seconds 60; classtype:attempted-admin; sid:1000018; rev:1;)
+    
+    # HTTP Flooding / DDoS
+    alert http any any -> any any (msg:"CUSTOM Potential HTTP Flood"; flow:established,to_server; threshold:type both, track by_src, count 50, seconds 10; classtype:attempted-dos; sid:1000019; rev:1;)
+    
+    # File Upload Attempts
+    alert http any any -> any any (msg:"CUSTOM Suspicious File Upload - PHP"; flow:established,to_server; content:"Content-Type|3a| multipart/form-data"; http_header; content:".php"; http_client_body; nocase; classtype:web-application-attack; sid:1000020; rev:1;)
+    alert http any any -> any any (msg:"CUSTOM Suspicious File Upload - JSP"; flow:established,to_server; content:"Content-Type|3a| multipart/form-data"; http_header; content:".jsp"; http_client_body; nocase; classtype:web-application-attack; sid:1000021; rev:1;)
