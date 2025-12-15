@@ -35,12 +35,20 @@ git checkout <branch>
 cd Projet_fwk
 ```
 
+3. Suricata network configuration
+
+Run this script to configure Suricata to your machine's network interface
+
+```bash
+chmod +x update_suricata_network.sh
+./update_suricata_network.sh
+```
+
 2. Build and import images into k3s (recommended, automated):
 
 ```bash
 chmod +x rebuild_and_setup.sh
 ./rebuild_and_setup.sh
-# Or if images are already built: ./finish_setup.sh
 ```
 
 What the script does:

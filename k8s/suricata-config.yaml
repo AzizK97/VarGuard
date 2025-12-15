@@ -106,7 +106,7 @@ data:
     
     # AF Packet configuration
     af-packet:
-      - interface: wlp45s0
+      - interface: "wlp4s0"
         cluster-id: 99
         cluster-type: cluster_flow
         defrag: yes
@@ -200,11 +200,34 @@ data:
           enabled: yes
         smtp:
           enabled: yes
+        dns:      compression: none
+      mode: normal
+      use-stream-depth: no
+      honor-pass-rules: no
+    
+    # App layer protocols
+    app-layer:
+      protocols:
+        tls:
+          enabled: yes
+          detection-ports:
+            dp: 443
+        http:
+          enabled: yes
+        smtp:
+          enabled: yes
         dns:
           tcp:
             enabled: yes
           udp:
             enabled: yes
+        ssh:
+          enabled: yes
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: suricata-rules
         ssh:
           enabled: yes
 ---

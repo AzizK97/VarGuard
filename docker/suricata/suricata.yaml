@@ -100,7 +100,7 @@ logging:
 
 # AF Packet configuration
 af-packet:
-  - interface: wlp45s0
+  - interface: wlp4s0
     cluster-id: 99
     cluster-type: cluster_flow
     defrag: yes
