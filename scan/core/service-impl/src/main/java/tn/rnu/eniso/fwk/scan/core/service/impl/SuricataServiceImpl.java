@@ -3,8 +3,8 @@ package tn.rnu.eniso.fwk.scan.core.service.impl;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -26,9 +26,9 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
-@RequiredArgsConstructor
-@Slf4j
 public class SuricataServiceImpl implements SuricataService {
+
+    private static final Logger log = LoggerFactory.getLogger(SuricataServiceImpl.class);
 
     private final AlertRepository alertRepository;
     private final DeviceRepository deviceRepository;
@@ -36,6 +36,18 @@ public class SuricataServiceImpl implements SuricataService {
     private final ApplicationEventPublisher eventPublisher;
     private final DailyThreatService dailyThreatService;
     private final ObjectMapper objectMapper = createObjectMapper();
+
+    public SuricataServiceImpl(AlertRepository alertRepository,
+            DeviceRepository deviceRepository,
+            ElasticsearchService elasticsearchService,
+            ApplicationEventPublisher eventPublisher,
+            DailyThreatService dailyThreatService) {
+        this.alertRepository = alertRepository;
+        this.deviceRepository = deviceRepository;
+        this.elasticsearchService = elasticsearchService;
+        this.eventPublisher = eventPublisher;
+        this.dailyThreatService = dailyThreatService;
+    }
 
     private static ObjectMapper createObjectMapper() {
         ObjectMapper mapper = new ObjectMapper();

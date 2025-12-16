@@ -1,6 +1,5 @@
 package tn.rnu.eniso.fwk.scan.core.ws.rest;
 
-import lombok.RequiredArgsConstructor;
 import org.springframework.context.event.EventListener;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -22,12 +21,15 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 @RestController
 @RequestMapping("/api/suricata")
-@RequiredArgsConstructor
 @CrossOrigin(origins = "*")
 public class SuricataController {
 
     private final SuricataService suricataService;
     private final DailyThreatService dailyThreatService;
+    public SuricataController(SuricataService suricataService, DailyThreatService dailyThreatService) {
+        this.suricataService = suricataService;
+        this.dailyThreatService = dailyThreatService;
+    }
 
     // Store SSE emitters for real-time alert streaming
     private final List<SseEmitter> emitters = new CopyOnWriteArrayList<>();

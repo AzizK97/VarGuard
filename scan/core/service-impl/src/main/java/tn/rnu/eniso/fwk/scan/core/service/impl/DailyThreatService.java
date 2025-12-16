@@ -1,7 +1,7 @@
 package tn.rnu.eniso.fwk.scan.core.service.impl;
 
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import tn.rnu.eniso.fwk.scan.core.infra.model.Alert;
@@ -20,15 +20,21 @@ import java.util.stream.Collectors;
  * {@link tn.rnu.eniso.fwk.scan.core.service.impl.RedisConfig}.
  */
 @Service
-@RequiredArgsConstructor
-@Slf4j
 public class DailyThreatService {
+
+    private static final Logger log = LoggerFactory.getLogger(DailyThreatService.class);
 
     private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ISO_LOCAL_DATE;
     private static final String KEY_PREFIX = "daily_threats:";
 
     private final RedisTemplate<String, Alert> alertRedisTemplate;
     private final tn.rnu.eniso.fwk.scan.core.dal.repository.AlertRepository alertRepository;
+
+    public DailyThreatService(RedisTemplate<String, Alert> alertRedisTemplate,
+            tn.rnu.eniso.fwk.scan.core.dal.repository.AlertRepository alertRepository) {
+        this.alertRedisTemplate = alertRedisTemplate;
+        this.alertRepository = alertRepository;
+    }
 
     public void cacheAlert(Alert alert) {
         if (alert == null) {
