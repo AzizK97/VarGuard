@@ -2,13 +2,13 @@ import { useState, useEffect } from 'react';
 import StatisticsCards from './components/StatisticsCards';
 import AlertList from './components/AlertList';
 import NetworkScan from './components/NetworkScan';
-import { suricataApi } from './services/api';
-import type { Alert, AlertStatistics } from './types';
+import { suricataApi, type TodayStatistics } from './services/api';
+import type { Alert } from './types';
 import './App.css';
 
 function App() {
   const [alerts, setAlerts] = useState<Alert[]>([]);
-  const [statistics, setStatistics] = useState<AlertStatistics | null>(null);
+  const [statistics, setStatistics] = useState<TodayStatistics | null>(null);
   const [loading, setLoading] = useState(true);
   const [connected, setConnected] = useState(false);
   const [lastUpdate, setLastUpdate] = useState<Date>(new Date());
@@ -20,7 +20,7 @@ function App() {
         setLoading(true);
         const [alertsData, statsData] = await Promise.all([
           suricataApi.getRecentAlerts(50),
-          suricataApi.getStatistics(),
+          suricataApi.getTodayStatistics(),
         ]);
         setAlerts(alertsData);
         setStatistics(statsData);
@@ -61,7 +61,7 @@ function App() {
   useEffect(() => {
     const interval = setInterval(async () => {
       try {
-        const statsData = await suricataApi.getStatistics();
+        const statsData = await suricataApi.getTodayStatistics();
         setStatistics(statsData);
       } catch (error) {
         console.error('Error refreshing statistics:', error);

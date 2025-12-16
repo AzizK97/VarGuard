@@ -14,6 +14,7 @@ import tn.rnu.eniso.fwk.scan.core.infra.model.AlertSeverity;
 import tn.rnu.eniso.fwk.scan.core.infra.model.AlertStatistics;
 import tn.rnu.eniso.fwk.scan.core.service.api.SuricataService;
 import tn.rnu.eniso.fwk.scan.core.service.impl.AlertEvent;
+import tn.rnu.eniso.fwk.scan.core.service.impl.DailyThreatService;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -26,6 +27,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class SuricataController {
 
     private final SuricataService suricataService;
+    private final DailyThreatService dailyThreatService;
 
     // Store SSE emitters for real-time alert streaming
     private final List<SseEmitter> emitters = new CopyOnWriteArrayList<>();
@@ -85,6 +87,15 @@ public class SuricataController {
             @RequestParam(required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime since) {
         LocalDateTime sinceTime = since != null ? since : LocalDateTime.now().minusDays(7);
         AlertStatistics stats = suricataService.getStatistics(sinceTime);
+        return ResponseEntity.ok(stats);
+    }
+
+    /**
+     * Get today's statistics from Redis
+     */
+    @GetMapping("/statistics/today")
+    public ResponseEntity<DailyThreatService.TodayStatistics> getTodayStatistics() {
+        DailyThreatService.TodayStatistics stats = dailyThreatService.getTodayStatistics();
         return ResponseEntity.ok(stats);
     }
 

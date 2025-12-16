@@ -1,9 +1,9 @@
 import React from 'react';
-import type { AlertStatistics } from '../types';
+import type { TodayStatistics } from '../services/api';
 import './StatisticsCards.css';
 
 interface StatisticsCardsProps {
-    statistics: AlertStatistics | null;
+    statistics: TodayStatistics | null;
     loading?: boolean;
 }
 
@@ -22,52 +22,40 @@ const StatisticsCards: React.FC<StatisticsCardsProps> = ({ statistics, loading }
 
     const stats = [
         {
-            label: 'Total Alerts',
+            label: 'Total Alerts (All Time)',
+            value: statistics.globalTotal,
+            color: '#007bff',
+            icon: '📉',
+        },
+        {
+            label: 'Today\'s Traffic',
             value: statistics.totalAlerts,
             color: '#6c757d',
             icon: '📊',
         },
         {
-            label: 'Critical',
+            label: 'Critical (Today)',
             value: statistics.criticalAlerts,
             color: '#dc3545',
             icon: '🔴',
         },
         {
-            label: 'High',
+            label: 'High (Today)',
             value: statistics.highAlerts,
             color: '#fd7e14',
             icon: '🟠',
         },
         {
-            label: 'Medium',
+            label: 'Medium (Today)',
             value: statistics.mediumAlerts,
             color: '#ffc107',
             icon: '🟡',
         },
         {
-            label: 'Low',
+            label: 'Low (Today)',
             value: statistics.lowAlerts,
             color: '#28a745',
             icon: '🟢',
-        },
-        {
-            label: 'Last Hour',
-            value: statistics.alertsLastHour,
-            color: '#17a2b8',
-            icon: '⏱️',
-        },
-        {
-            label: 'Last 24h',
-            value: statistics.alertsLast24Hours,
-            color: '#6610f2',
-            icon: '📅',
-        },
-        {
-            label: 'Last 7 Days',
-            value: statistics.alertsLast7Days,
-            color: '#e83e8c',
-            icon: '📆',
         },
     ];
 

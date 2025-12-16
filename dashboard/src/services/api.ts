@@ -1,6 +1,15 @@
 import axios from 'axios';
 import type { Alert, AlertStatistics, AlertSeverity } from '../types';
 
+export interface TodayStatistics {
+    globalTotal: number;
+    totalAlerts: number;
+    criticalAlerts: number;
+    highAlerts: number;
+    mediumAlerts: number;
+    lowAlerts: number;
+}
+
 const API_BASE_URL = import.meta.env.VITE_API_URL || '/api';
 
 const api = axios.create({
@@ -50,6 +59,12 @@ export const suricataApi = {
         const response = await api.get<AlertStatistics>('/suricata/statistics', {
             params: since ? { since } : {},
         });
+        return response.data;
+    },
+
+    // Get today's statistics from Redis
+    getTodayStatistics: async (): Promise<TodayStatistics> => {
+        const response = await api.get<TodayStatistics>('/suricata/statistics/today');
         return response.data;
     },
 
