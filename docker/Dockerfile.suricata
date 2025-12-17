@@ -26,7 +26,11 @@ EXPOSE 8000
 # Set working directory
 WORKDIR /var/log/suricata
 
+<<<<<<< Updated upstream
 # Environment variable for network interface (default: wlp455s0)
+=======
+# Environment variable for network interface (default: wlp45s0)
+>>>>>>> Stashed changes
 ENV NETWORK_INTERFACE=wlp4s0
 
 # Run Suricata with configurable interface

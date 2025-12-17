@@ -18,10 +18,15 @@ spec:
       - name: suricata
         image: suricata:latest
         imagePullPolicy: IfNotPresent
+        command: ["suricata", "-c", "/etc/suricata-config/suricata.yaml", "-i", "wlp4s0", "-v"]
         securityContext:
           capabilities:
             add: ["NET_ADMIN", "NET_RAW", "SYS_NICE"]
+<<<<<<< Updated upstream
         command: ["suricata", "-c", "/etc/suricata-config/suricata.yaml", "-i", "wlp4s0", "-v"]
+=======
+
+>>>>>>> Stashed changes
         env:
         - name: TZ
           value: "Africa/Tunis"
