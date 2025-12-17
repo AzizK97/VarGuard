@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: redis
+  namespace: project-fwk
   labels:
     app: redis
 spec:
@@ -42,6 +43,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: redis
+  namespace: project-fwk
   labels:
     app: redis
 spec:
